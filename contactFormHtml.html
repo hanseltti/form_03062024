@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT FORM TEMPLATE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .contact__form__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "userInfo address"
+          "userInfo phone"
+          "userInfo email"
+          "userInfo social";
+      }
+
+      .d__flex__row {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+
+      .d__flex__col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .border__padding__color {
+        border: 1px solid lightgrey;
+        padding: 3rem;
+        background-color: #f5f5f5;
+      }
+
+      .a__hover {
+        transition: 0.3s;
+      }
+
+      .a__hover:hover {
+        color: #18bfef;
+      }
+
+      form :where(input, textarea, button) {
+        background-color: #f5f5f5;
+      }
+
+      form label {
+        margin-bottom: 0.7rem;
+        font-weight: 900;
+        font-size: 0.8rem;
+        color: rgb(102, 102, 102);
+      }
+
+      form input {
+        margin-bottom: 1.5rem;
+        padding: 0.7rem 0;
+        border: 2px solid;
+        border-color: lightgrey;
+      }
+
+      form input:focus {
+        border-color: #18bfef;
+      }
+
+      form > textarea {
+        margin-bottom: 1rem;
+        border: 2px solid lightgrey;
+      }
+
+      form > button {
+        width: 200px;
+        padding: 0.7rem 0;
+        border: 2px solid grey;
+        color: gray;
+        font-weight: 800;
+        transition: 0.3s;
+      }
+
+      form > button:hover {
+        padding: 0.7rem 0;
+        border: 2px solid #18bfef;
+        color: #18bfef;
+        font-weight: 800;
+      }
+
+      .contact__form__grid__items__all h3 {
+        color: #717981;
+        font-weight: 900;
+        font-size: 14px;
+        flex-basis: 100px;
+      }
+
+      .contact__form__grid__items__all :where(p, a) {
+        font-weight: 100;
+        text-decoration: none;
+        color: #717981;
+        line-height: 2rem;
+      }
+
+      .contact__form__grid__each__div__1 {
+        grid-area: userInfo;
+      }
+
+      .contact__form__grid__each__div__2 {
+        grid-area: address;
+      }
+
+      .contact__form__grid__each__div__3 {
+        grid-area: phone;
+      }
+
+      .contact__form__grid__each__div__4 {
+        grid-area: email;
+      }
+
+      .contact__form__grid__each__div__5 {
+        grid-area: social;
+      }
+
+      .contact__form__grid__each__div__5 div i {
+        margin-right: 1rem;
+        font-size: 2rem;
+        transition: 0.3s;
+      }
+
+      .contact__form__grid__each__div__5 div i:hover {
+        color: #18bfef;
+      }
+
+      @media (width < 765px) {
+        .contact__form__grid {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas:
+            "userInfo"
+            "address"
+            "phone"
+            "email"
+            "social";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact__form__grid">
+      <div
+        class="contact__form__grid__items__all contact__form__grid__each__div__1 border__padding__color"
+      >
+        <form action="" class="d__flex__col">
+          <label for="name">NAME</label>
+          <input type="text" name="name" required />
+          <label for="email">EMAIL</label>
+          <input type="text" name="email" required />
+          <label for="message">MESSAGE</label>
+          <textarea name="message" id="" cols="30" rows="10"></textarea> <br />
+          <button>SEND MESSAGE</button>
+        </form>
+      </div>
+      <div
+        class="contact__form__grid__items__all contact__form__grid__each__div__2 d__flex__row border__padding__color"
+      >
+        <h3>ADDRESS</h3>
+        <p>
+          1234 Somewhere Road #1234 <br />
+          Tampa FL 00000
+        </p>
+      </div>
+      <div
+        class="contact__form__grid__items__all contact__form__grid__each__div__3 d__flex__row border__padding__color"
+      >
+        <h3>PHONE</h3>
+        <a href="tel:(123) 123 1234" class="a__hover">(123) 123 1234</a>
+      </div>
+      <div
+        class="contact__form__grid__items__all contact__form__grid__each__div__4 d__flex__row border__padding__color"
+      >
+        <h3>EMAIL</h3>
+        <a href="mailto" class="a__hover">info@untitle.tld</a>
+      </div>
+      <div
+        class="contact__form__grid__items__all contact__form__grid__each__div__5 d__flex__row border__padding__color"
+      >
+        <h3>SOCIAL</h3>
+        <div>
+          <a href="https://facebook.com" target="_blank" class="">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
